@@ -1,0 +1,7 @@
+changeDetection: ChangeDetectionStrategy.Default = runs every time we change something
+
+changeDetection: ChangeDetectionStrategy.OnPush = Only run the the object reference has changed (immutable objects).
+OnPush is faster and more effecient. Stateless components or represantational component -> state changes is done with @Output event emitters
+
+Angular is faster when using object reference comparisons. When you use immutable objects, Angular does not have to check the previous en the next values
+to detect that an update is due. Resolves in a better rerendering of the components
